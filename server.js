@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 dotenv.config();
 const app = express();
 
-app.use(cors());
+// Configure CORS to accept all requests
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 
 // Routes
